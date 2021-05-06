@@ -1,15 +1,19 @@
+import { useState } from 'react';
 import Link from 'next/link';
 import Logo from './Logo';
 import InstagramIcon from '@material-ui/icons/Instagram';
 import GitHubIcon from '@material-ui/icons/GitHub';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import { Wrapper, IconsWrapper } from './Navigation.styles';
+import Burger from './Burger/Burger';
 
 const Navigation: React.FC = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
   return (
     <Wrapper>
       <Logo />
-      <IconsWrapper>
+      {/* <IconsWrapper>
         <Link href="https://www.instagram.com/mvjl000/">
           <a target="_blank">
             <InstagramIcon />
@@ -25,7 +29,11 @@ const Navigation: React.FC = () => {
             <LinkedInIcon />
           </a>
         </Link>
-      </IconsWrapper>
+      </IconsWrapper> */}
+      <Burger
+        onButtonClick={() => setIsMenuOpen(!isMenuOpen)}
+        isActive={isMenuOpen}
+      />
     </Wrapper>
   );
 };
