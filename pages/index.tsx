@@ -1,8 +1,13 @@
-import React from 'react';
-import { Wrapper } from '../components/HomePage/HomePage.styles';
+import { NextPage } from 'next';
+import Hero from '../components/Hero/Hero';
+// import { Wrapper } from '../components/HomePage/HomePage.styles';
 
-const HomePage: React.FC = () => {
-  return <Wrapper></Wrapper>;
+const HomePage: NextPage = () => {
+  return (
+    <>
+      <Hero />
+    </>
+  );
 };
 
 export default HomePage;
