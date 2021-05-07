@@ -42,6 +42,33 @@ export const StyledMenu = styled.div`
   padding: 8rem 0;
   ul {
     width: 100%;
-    display: block;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+  }
+`;
+
+export const IconsWrapper = styled.div`
+  position: absolute;
+  bottom: 30px;
+  right: 50%;
+  transform: translateX(50%);
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 250px;
+  @media (min-width: 1024px) {
+    bottom: 40px;
+    right: 20px;
+    transform: translateX(0%);
+  }
+  svg {
+    color: #000;
+    transform: scale(1.4);
+    cursor: pointer;
+    @media (min-width: 1024px) {
+      transform: scale(1.5) translateY(10px);
+    }
   }
 `;

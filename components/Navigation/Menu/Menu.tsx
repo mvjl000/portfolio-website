@@ -1,18 +1,24 @@
 import { Dispatch, SetStateAction } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import Link from 'next/link';
+import { AnimatePresence } from 'framer-motion';
 import Burger from '../Burger/Burger';
-import { Wrapper, LogoWrapper, BurgerWrapper, StyledMenu } from './Menu.styles';
+import {
+  Wrapper,
+  LogoWrapper,
+  BurgerWrapper,
+  StyledMenu,
+  IconsWrapper,
+} from './Menu.styles';
 import Panels from './Panels/Panels';
 import Logo from '../Logo';
+import InstagramIcon from '@material-ui/icons/Instagram';
+import GitHubIcon from '@material-ui/icons/GitHub';
+import LinkedInIcon from '@material-ui/icons/LinkedIn';
 
 interface MenuProps {
   isMenuOpen: boolean;
   setIsMenuOpen: Dispatch<SetStateAction<boolean>>;
 }
-
-const parent = {
-  animate: { transition: { staggerChildren: 0.1, delayChildren: 1 } },
-};
 
 const Menu: React.FC<MenuProps> = ({ isMenuOpen, setIsMenuOpen }) => {
   const closeMenu = () => {
@@ -42,20 +48,28 @@ const Menu: React.FC<MenuProps> = ({ isMenuOpen, setIsMenuOpen }) => {
                 <Burger isOpenVariant={false} onButtonClick={closeMenu} />
               </BurgerWrapper>
               <StyledMenu>
-                <div className="container">
-                  <div className="menu-inner">
-                    <motion.ul
-                      variants={parent}
-                      initial="initial"
-                      animate="animate"
-                      exit="exit"
-                    >
-                      <li>Hello</li>
-                      <li>World</li>
-                      <li>Will it work?</li>
-                    </motion.ul>
-                  </div>
-                </div>
+                <ul>
+                  <li>Hello</li>
+                  <li>World</li>
+                  <li>Will it work?</li>
+                </ul>
+                <IconsWrapper>
+                  <Link href="https://www.instagram.com/mvjl000/">
+                    <a target="_blank">
+                      <InstagramIcon />
+                    </a>
+                  </Link>
+                  <Link href="https://github.com/mvjl000">
+                    <a target="_blank">
+                      <GitHubIcon />
+                    </a>
+                  </Link>
+                  <Link href="https://www.linkedin.com/in/mi%C5%82osz-piskad%C5%82o-477a2a1b5/">
+                    <a target="_blank">
+                      <LinkedInIcon />
+                    </a>
+                  </Link>
+                </IconsWrapper>
               </StyledMenu>
             </Wrapper>
             <Panels />
