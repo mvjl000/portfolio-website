@@ -16,7 +16,7 @@ const About: React.FC = () => {
       <StyledHeading>#About Me</StyledHeading>
       <ContentWrapper>
         <AboutContent>
-          Hi, it's good to see you here! My name is Milosz - 17 y.o., I live in
+          Hi, it's good to see you here! My name is Milosz - 17 y.o. I live in
           Poland, based in Rzeszow. I'm freelancer Web Developer, mainly focused
           on frontend, but I enjoy backend as well (Javascript - Typescript -
           Node). Started learning to code in late 2019, fell in love with React

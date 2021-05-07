@@ -79,6 +79,7 @@ export const ToolSetWrapper = styled.div`
       margin-bottom: 25px;
     }
     @media (min-width: 1024px) {
+      font-size: 21px;
       &:nth-child(2) {
         margin-bottom: 50px;
       }
