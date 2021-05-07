@@ -50,9 +50,15 @@ export const StyledMenu = styled.div`
 `;
 
 export const ListItem = styled.li`
+  padding: 2px 10px;
   margin: 10px 0;
   color: #000;
   font-size: 23px;
+  transition: 0.3s;
+  &:hover {
+    color: #fff;
+    background-color: #000;
+  }
 `;
 
 export const IconsWrapper = styled.div`
