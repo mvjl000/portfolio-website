@@ -1,6 +1,6 @@
 import { useEffect, Dispatch, SetStateAction } from 'react';
 import { useRouter } from 'next/router';
-// import Link from 'next/link';
+import Link from 'next/link';
 import Logo from './Logo';
 import { Wrapper, IconsWrapper } from './Navigation.styles';
 import Burger from './Burger/Burger';
@@ -22,7 +22,11 @@ const Navigation: React.FC<NavigationProps> = ({
 
   return (
     <Wrapper>
-      <Logo />
+      <Link href="/">
+        <a>
+          <Logo />
+        </a>
+      </Link>
       <Burger
         onButtonClick={() => setIsMenuOpen(!isMenuOpen)}
         isOpenVariant={true}
