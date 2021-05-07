@@ -19,24 +19,29 @@ const bounceBigger = keyframes`
 `;
 
 export const Wrapper = styled.section`
-  background-color: #333;
+  background-image: url('/images/darkerWallSide.JPG');
+  background-repeat: no-repeat;
+  background-position: 45% 10%;
 `;
 
 export const ProfessionHeading = styled.h1`
   position: absolute;
-  top: 55%;
+  top: 70%;
   left: 50%;
   transform: translateX(-50%);
   color: white;
   font-size: 58px;
-  font-weight: 500;
+  font-weight: 600;
   font-style: italic;
   text-align: center;
+  @media (min-width: 1213px) {
+    top: 72%;
+  }
 `;
 
 export const ArrowWrapper = styled.div`
   position: absolute;
-  bottom: 8%;
+  bottom: 1%;
   left: 50%;
   transform: translateX(-50%);
   display: flex;
@@ -45,6 +50,12 @@ export const ArrowWrapper = styled.div`
   align-items: center;
   width: 350px;
   cursor: pointer;
+  @media (min-width: 1024px) {
+    bottom: 3%;
+  }
+  @media (min-width: 1213px) {
+    bottom: 6%;
+  }
   p {
     color: white;
     font-size: 20px;
