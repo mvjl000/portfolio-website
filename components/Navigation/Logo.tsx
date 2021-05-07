@@ -7,7 +7,7 @@ const Wrapper = styled.div`
   justify-content: center;
   p {
     font-family: 'Quicksand', sans-serif;
-    color: white;
+    color: #fff;
     font-weight: 600;
     font-size: 18px;
     @media (min-width: 1024px) {

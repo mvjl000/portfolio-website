@@ -10,6 +10,19 @@ export const Wrapper = styled(motion.div)`
   background: #fff;
 `;
 
+export const LogoWrapper = styled.div`
+  z-index: 100;
+  position: absolute;
+  color: #000;
+  top: 15px;
+  left: 25px;
+  display: flex;
+  align-items: center;
+  p {
+    color: #000 !important;
+  }
+`;
+
 export const BurgerWrapper = styled.div`
   z-index: 100;
   position: absolute;

@@ -1,14 +1,14 @@
-import { useEffect, Dispatch, SetStateAction } from 'react';
+import { Dispatch, SetStateAction } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import Burger from '../Burger/Burger';
-import { Wrapper, BurgerWrapper, StyledMenu } from './Menu.styles';
+import { Wrapper, LogoWrapper, BurgerWrapper, StyledMenu } from './Menu.styles';
+import Panels from './Panels/Panels';
+import Logo from '../Logo';
 
 interface MenuProps {
   isMenuOpen: boolean;
   setIsMenuOpen: Dispatch<SetStateAction<boolean>>;
 }
-
-const transition = { duration: 0.8, ease: [0.6, -0.05, 0.01, 0.9] };
 
 const parent = {
   animate: { transition: { staggerChildren: 0.1, delayChildren: 1 } },
@@ -35,6 +35,9 @@ const Menu: React.FC<MenuProps> = ({ isMenuOpen, setIsMenuOpen }) => {
                 transition: { delay: 1 },
               }}
             >
+              <LogoWrapper>
+                <Logo />
+              </LogoWrapper>
               <BurgerWrapper>
                 <Burger isOpenVariant={false} onButtonClick={closeMenu} />
               </BurgerWrapper>
@@ -55,6 +58,7 @@ const Menu: React.FC<MenuProps> = ({ isMenuOpen, setIsMenuOpen }) => {
                 </div>
               </StyledMenu>
             </Wrapper>
+            <Panels />
           </>
         )}
       </AnimatePresence>
