@@ -1,10 +1,6 @@
 import styled from 'styled-components';
 
-export interface StyledBurgerProps {
-  isActive: boolean;
-}
-
-export const StyledBurger = styled.button<StyledBurgerProps>`
+const Burger = styled.button`
   position: relative;
   margin-top: 11px;
   width: 40px;
@@ -19,21 +15,34 @@ export const StyledBurger = styled.button<StyledBurgerProps>`
     position: absolute;
     width: 100%;
     height: 3px;
-    background-color: #fff;
     transition: 0.2s;
   }
+`;
 
+export const OpenBurger = styled(Burger)`
   &::before {
     top: 0;
     left: 0;
-    transform: ${({ isActive }) =>
-      isActive ? 'translateY(8.5px) rotate(45deg)' : ''};
+    background-color: #fff;
   }
-
   &::after {
     bottom: 0;
     left: 0;
-    transform: ${({ isActive }) =>
-      isActive ? 'translateY(-8.5px) rotate(-45deg)' : ''};
+    background-color: #fff;
+  }
+`;
+
+export const CloseBurger = styled(Burger)`
+  &::before {
+    top: 0;
+    left: 0;
+    transform: translateY(8.5px) rotate(45deg);
+    background-color: #000;
+  }
+  &::after {
+    bottom: 0;
+    left: 0;
+    transform: translateY(-8.5px) rotate(-45deg);
+    background-color: #000;
   }
 `;

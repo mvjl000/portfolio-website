@@ -1,11 +1,16 @@
-import { StyledBurgerProps, StyledBurger } from './Burger.styles';
+import { OpenBurger, CloseBurger } from './Burger.styles';
 
-interface BurgerProps extends StyledBurgerProps {
+interface BurgerProps {
+  isOpenVariant: boolean;
   onButtonClick: () => void;
 }
 
-const Burger: React.FC<BurgerProps> = ({ isActive, onButtonClick }) => (
-  <StyledBurger onClick={onButtonClick} isActive={isActive} />
-);
+const Burger: React.FC<BurgerProps> = ({ onButtonClick, isOpenVariant }) => {
+  if (isOpenVariant) {
+    return <OpenBurger onClick={onButtonClick} />;
+  } else {
+    return <CloseBurger onClick={onButtonClick} />;
+  }
+};
 
 export default Burger;
