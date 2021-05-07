@@ -49,6 +49,12 @@ export const StyledMenu = styled.div`
   }
 `;
 
+export const ListItem = styled.li`
+  margin: 10px 0;
+  color: #000;
+  font-size: 23px;
+`;
+
 export const IconsWrapper = styled.div`
   position: absolute;
   bottom: 30px;

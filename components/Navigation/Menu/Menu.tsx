@@ -7,6 +7,7 @@ import {
   LogoWrapper,
   BurgerWrapper,
   StyledMenu,
+  ListItem,
   IconsWrapper,
 } from './Menu.styles';
 import Panels from './Panels/Panels';
@@ -49,9 +50,21 @@ const Menu: React.FC<MenuProps> = ({ isMenuOpen, setIsMenuOpen }) => {
               </BurgerWrapper>
               <StyledMenu>
                 <ul>
-                  <li>Hello</li>
-                  <li>World</li>
-                  <li>Will it work?</li>
+                  <Link href="/projects">
+                    <a>
+                      <ListItem>Projects</ListItem>
+                    </a>
+                  </Link>
+                  <Link href="/self-development">
+                    <a>
+                      <ListItem>Self Development</ListItem>
+                    </a>
+                  </Link>
+                  <Link href="/setup">
+                    <a>
+                      <ListItem>My Setup</ListItem>
+                    </a>
+                  </Link>
                 </ul>
                 <IconsWrapper>
                   <Link href="https://www.instagram.com/mvjl000/">

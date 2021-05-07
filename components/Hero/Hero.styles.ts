@@ -26,7 +26,7 @@ export const Wrapper = styled.section`
 
 export const ProfessionHeading = styled.h1`
   position: absolute;
-  top: 70%;
+  top: 65%;
   left: 50%;
   transform: translateX(-50%);
   color: white;
@@ -36,6 +36,9 @@ export const ProfessionHeading = styled.h1`
   text-align: center;
   @media (min-width: 1213px) {
     top: 72%;
+  }
+  @media (min-width: 1400px) {
+    font-size: 64px;
   }
 `;
 
