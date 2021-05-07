@@ -71,14 +71,17 @@ export const ToolSetWrapper = styled.div`
     width: auto;
   }
   p {
-    margin-bottom: 40px;
     width: 100%;
     text-align: center;
-    padding: 0 20px;
     font-size: 19px;
     color: #fff;
+    &:nth-child(2) {
+      margin-bottom: 25px;
+    }
     @media (min-width: 1024px) {
-      margin-top: 50px;
+      &:nth-child(2) {
+        margin-bottom: 50px;
+      }
     }
   }
   img {

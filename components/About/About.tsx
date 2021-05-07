@@ -32,9 +32,8 @@ const About: React.FC = () => {
         ></iframe>
       </ContentWrapper>
       <ToolSetWrapper>
-        <p>
-          Best combo, try to change my mind down in contact section ( ͡° ͜ʖ ͡°):
-        </p>
+        <p>Best combo, try to change my mind down in contact section</p>
+        <p>( ͡° ͜ʖ ͡°):</p>
         <div>
           <ImageWrapper>
             <Image src="/images/typescript-logo.png" width={300} height={300} />
