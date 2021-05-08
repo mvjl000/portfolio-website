@@ -17,15 +17,24 @@ export const StyledHeading = styled.h1`
 `;
 
 export const ContentWrapper = styled.div`
-  margin: 20px auto 5px;
+  margin: 8% auto;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
   padding: 0 40px;
-  max-width: 1500px;
+  max-width: 1600px;
   @media (min-width: 1024px) {
     flex-direction: row;
+  }
+
+  a {
+    text-decoration: underline;
+    transition: 0.2s;
+    &:hover {
+      color: #000;
+      background-color: white;
+    }
   }
 
   iframe {
@@ -34,6 +43,7 @@ export const ContentWrapper = styled.div`
     max-width: 470px;
     @media (min-width: 1024px) {
       min-width: 400px;
+      margin-left: 50px;
     }
   }
 `;
@@ -57,16 +67,11 @@ export const ToolSetWrapper = styled.div`
   align-items: center;
   justify-content: space-around;
   width: 100%;
-  max-width: 1500px;
+  max-width: 1600px;
   padding: 0 20px;
   @media (min-width: 1024px) {
     align-items: flex-start;
     padding: 0 40px;
-  }
-  div {
-    display: flex;
-    align-items: center;
-    justify-content: center;
   }
   p {
     width: 100%;
@@ -75,28 +80,8 @@ export const ToolSetWrapper = styled.div`
     color: #fff;
     padding: 10px 25px;
     margin-bottom: 10px;
-    &:nth-child(2) {
-      margin-bottom: 25px;
-    }
     @media (min-width: 1024px) {
       font-size: 21px;
-      &:nth-child(2) {
-        margin-bottom: 50px;
-      }
-    }
-  }
-  span {
-    margin-left: 28px;
-    @media (min-width: 1024px) {
-      margin: 0;
-    }
-  }
-  img {
-    display: block;
-    margin: 20px 30px;
-    width: 100px;
-    @media (min-width: 1024px) {
-      width: 150px;
     }
   }
 `;
