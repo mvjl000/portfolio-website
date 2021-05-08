@@ -14,20 +14,27 @@ export const Wrapper = styled.section`
       width: 180%;
       height: 300%;
       transform: rotate(65deg);
+      z-index: 0;
       @media (min-width: 1024px) {
         top: -30%;
-        left: 30%;
+        left: 25%;
         width: 90%;
         height: 300%;
         transform: rotate(20deg);
+      }
+      @media (min-width: 1260px) {
+        left: 26%;
       }
     }
   }
   iframe {
     position: absolute;
     top: 50%;
-    left: 120px;
-    transform: translateY(-50%);
+    left: 25%;
+    transform: translate(-50%, -50%);
+    @media (min-width: 1260px) {
+      left: 18%;
+    }
   }
 `;
 
@@ -104,5 +111,23 @@ export const MediaList = styled.ul`
         color: #fff;
       }
     }
+  }
+`;
+
+export const FormContainer = styled.div`
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  width: 80%;
+  @media (min-width: 1024px) {
+    flex-direction: row;
+  }
+  div {
+    z-index: 1;
+    width: 40%;
+    height: 300px;
+    background-color: #ddd;
   }
 `;

@@ -7,6 +7,7 @@ import {
   ServiceText,
   ContactText,
   MediaList,
+  FormContainer,
 } from './Contact.styles';
 import MailOutlineIcon from '@material-ui/icons/MailOutline';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
@@ -36,28 +37,32 @@ const Contact: React.FC = () => {
           managing it.
         </ServiceText>
         <ContactText>
-          If you would like to make cooperation with me, contact me via email or
-          social media linked down below. We will discuss then all details.
+          If you would like to make cooperation with me, contact me via form,
+          email or social media linked down below. We will discuss then all
+          details.
         </ContactText>
-        <MediaList>
-          <li>
-            <MailOutlineIcon /> milosz.devmail@gmail.com
-          </li>
-          <Link href="https://www.linkedin.com/in/mi%C5%82osz-piskad%C5%82o-477a2a1b5/">
-            <a target="_blank">
-              <li>
-                <LinkedInIcon /> Miłosz Piskadło
-              </li>
-            </a>
-          </Link>
-          <Link href="https://www.facebook.com/profile.php?id=100021426672684">
-            <a target="_blank">
-              <li>
-                <FacebookIcon /> Miłosz Piskadło
-              </li>
-            </a>
-          </Link>
-        </MediaList>
+        <FormContainer>
+          <div></div>
+          <MediaList>
+            <li>
+              <MailOutlineIcon /> milosz.devmail@gmail.com
+            </li>
+            <Link href="https://www.linkedin.com/in/mi%C5%82osz-piskad%C5%82o-477a2a1b5/">
+              <a target="_blank">
+                <li>
+                  <LinkedInIcon /> Miłosz Piskadło
+                </li>
+              </a>
+            </Link>
+            <Link href="https://www.facebook.com/profile.php?id=100021426672684">
+              <a target="_blank">
+                <li>
+                  <FacebookIcon /> Miłosz Piskadło
+                </li>
+              </a>
+            </Link>
+          </MediaList>
+        </FormContainer>
       </ContentWrapper>
     </Wrapper>
   );
