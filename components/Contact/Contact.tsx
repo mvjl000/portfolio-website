@@ -8,10 +8,13 @@ import {
   ContactText,
   MediaList,
   FormContainer,
+  CopyRight,
 } from './Contact.styles';
-import MailOutlineIcon from '@material-ui/icons/MailOutline';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import FacebookIcon from '@material-ui/icons/Facebook';
+import InstagramIcon from '@material-ui/icons/Instagram';
+import GitHubIcon from '@material-ui/icons/GitHub';
+import ContactForm from './ContactForm/ContactForm';
 
 const Contact: React.FC = () => {
   const { isDesktopMode } = useScreen();
@@ -37,16 +40,12 @@ const Contact: React.FC = () => {
           managing it.
         </ServiceText>
         <ContactText>
-          If you would like to make cooperation with me, contact me via form,
-          email or social media linked down below. We will discuss then all
-          details.
+          If you would like to make cooperation with me, contact me via form or
+          social media linked down below. We will discuss then all details.
         </ContactText>
         <FormContainer>
-          <div></div>
+          <ContactForm />
           <MediaList>
-            <li>
-              <MailOutlineIcon /> milosz.devmail@gmail.com
-            </li>
             <Link href="https://www.linkedin.com/in/mi%C5%82osz-piskad%C5%82o-477a2a1b5/">
               <a target="_blank">
                 <li>
@@ -61,9 +60,24 @@ const Contact: React.FC = () => {
                 </li>
               </a>
             </Link>
+            <Link href="https://www.instagram.com/mvjl000/">
+              <a target="_blank">
+                <li>
+                  <InstagramIcon /> mvjl000
+                </li>
+              </a>
+            </Link>
+            <Link href="https://github.com/mvjl000">
+              <a target="_blank">
+                <li>
+                  <GitHubIcon /> mvjl000
+                </li>
+              </a>
+            </Link>
           </MediaList>
         </FormContainer>
       </ContentWrapper>
+      <CopyRight>Copyright © 2021 Miłosz Piskadło</CopyRight>
     </Wrapper>
   );
 };

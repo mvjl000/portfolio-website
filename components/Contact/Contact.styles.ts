@@ -3,6 +3,7 @@ import styled from 'styled-components';
 export const Wrapper = styled.section`
   position: relative;
   overflow: hidden;
+  padding-bottom: 20px;
   @media (min-width: 1024px) {
     &::after {
       position: absolute;
@@ -49,7 +50,7 @@ export const StyledHeading = styled.h1`
 `;
 
 export const ContentWrapper = styled.div`
-  margin: 50px auto;
+  margin: 50px auto 60px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -99,15 +100,20 @@ export const MediaList = styled.ul`
   li {
     margin: 5px 0;
     color: #111;
+    font-size: 17px;
     cursor: pointer;
     @media (min-width: 1024px) {
       color: #fff;
     }
+    &:hover {
+      text-decoration: underline;
+    }
     svg {
       color: #111;
       transform: translateY(5px);
+      margin-right: 10px;
       @media (min-width: 1024px) {
-        margin-right: 5px;
+        margin-right: 15px;
         color: #fff;
       }
     }
@@ -124,10 +130,11 @@ export const FormContainer = styled.div`
   @media (min-width: 1024px) {
     flex-direction: row;
   }
-  div {
-    z-index: 1;
-    width: 40%;
-    height: 300px;
-    background-color: #ddd;
-  }
+`;
+
+export const CopyRight = styled.p`
+  position: absolute;
+  bottom: 10px;
+  left: 20px;
+  color: #000;
 `;
