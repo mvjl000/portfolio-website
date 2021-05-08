@@ -17,11 +17,11 @@ const About: React.FC = () => {
       <ContentWrapper>
         <AboutContent>
           Hi, it's good to see you here! My name is Milosz - 17 y.o. I live in
-          Poland, based in Rzeszow. I'm freelancer Web Developer, mainly focused
-          on frontend, but I enjoy backend as well (Javascript - Typescript -
-          Node). Started learning to code in late 2019, fell in love with React
-          few months later. Broad minded and willing to keep learning. Besides
-          of coding I like to train at the gym.
+          Poland, based in Rzeszow. I'm a freelancer Web Developer, mainly
+          focused on frontend, but I enjoy backend as well (Javascript -
+          Typescript - Node). Started learning to code in late 2019, fell in
+          love with React few months later. Broad minded and willing to keep
+          learning. Besides of coding I like to train at the gym.
         </AboutContent>
         <iframe
           src="https://giphy.com/embed/xT5LMFZDsj0AKUDYTS"
@@ -32,8 +32,10 @@ const About: React.FC = () => {
         ></iframe>
       </ContentWrapper>
       <ToolSetWrapper>
-        <p>Best combo, try to change my mind down in contact section</p>
-        <p>( ͡° ͜ʖ ͡°):</p>
+        <p>
+          Best combo, try to change my mind down in contact section{' '}
+          <span>( ͡° ͜ʖ ͡°)</span>:
+        </p>
         <div>
           <ImageWrapper>
             <Image src="/images/typescript-logo.png" width={300} height={300} />

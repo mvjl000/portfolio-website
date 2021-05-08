@@ -64,17 +64,17 @@ export const ToolSetWrapper = styled.div`
     padding: 0 40px;
   }
   div {
-    margin: 0 auto;
     display: flex;
     align-items: center;
     justify-content: center;
-    width: auto;
   }
   p {
     width: 100%;
-    text-align: center;
+    text-align: left;
     font-size: 19px;
     color: #fff;
+    padding: 10px 25px;
+    margin-bottom: 10px;
     &:nth-child(2) {
       margin-bottom: 25px;
     }
@@ -83,6 +83,12 @@ export const ToolSetWrapper = styled.div`
       &:nth-child(2) {
         margin-bottom: 50px;
       }
+    }
+  }
+  span {
+    margin-left: 28px;
+    @media (min-width: 1024px) {
+      margin: 0;
     }
   }
   img {
@@ -102,6 +108,6 @@ export const TechWrapper = styled.div`
 export const ImageWrapper = styled.div`
   margin: 10px 30px;
   @media (min-width: 1024px) {
-    margin: 50px;
+    margin: 50px 20px;
   }
 `;
