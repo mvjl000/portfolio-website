@@ -127,7 +127,7 @@ export const FormContainer = styled.div`
   align-items: center;
   justify-content: space-between;
   width: 80%;
-  @media (min-width: 1024px) {
+  @media (min-width: 900px) {
     flex-direction: row;
   }
 `;
