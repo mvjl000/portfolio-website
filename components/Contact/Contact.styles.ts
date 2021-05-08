@@ -53,13 +53,6 @@ export const ContentWrapper = styled.div`
   }
 `;
 
-export const IframeContainer = styled.div`
-  position: absolute;
-  top: 50%;
-  left: 120px;
-  transform: translateY(-50%);
-`;
-
 export const ServiceText = styled.p`
   width: 80%;
   font-weight: 300;
@@ -86,5 +79,30 @@ export const ContactText = styled.p`
   @media (min-width: 1024px) {
     color: #111;
     background-color: #fff;
+  }
+`;
+
+export const MediaList = styled.ul`
+  margin-top: 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-evenly;
+  z-index: 2;
+  li {
+    margin: 5px 0;
+    color: #111;
+    cursor: pointer;
+    @media (min-width: 1024px) {
+      color: #fff;
+    }
+    svg {
+      color: #111;
+      transform: translateY(5px);
+      @media (min-width: 1024px) {
+        margin-right: 5px;
+        color: #fff;
+      }
+    }
   }
 `;

@@ -1,11 +1,12 @@
+import Link from 'next/link';
 import { useScreen } from '../../hooks/useScreen';
 import {
   Wrapper,
   StyledHeading,
   ContentWrapper,
-  IframeContainer,
   ServiceText,
   ContactText,
+  MediaList,
 } from './Contact.styles';
 import MailOutlineIcon from '@material-ui/icons/MailOutline';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
@@ -38,6 +39,25 @@ const Contact: React.FC = () => {
           If you would like to make cooperation with me, contact me via email or
           social media linked down below. We will discuss then all details.
         </ContactText>
+        <MediaList>
+          <li>
+            <MailOutlineIcon /> milosz.devmail@gmail.com
+          </li>
+          <Link href="https://www.linkedin.com/in/mi%C5%82osz-piskad%C5%82o-477a2a1b5/">
+            <a target="_blank">
+              <li>
+                <LinkedInIcon /> Miłosz Piskadło
+              </li>
+            </a>
+          </Link>
+          <Link href="https://www.facebook.com/profile.php?id=100021426672684">
+            <a target="_blank">
+              <li>
+                <FacebookIcon /> Miłosz Piskadło
+              </li>
+            </a>
+          </Link>
+        </MediaList>
       </ContentWrapper>
     </Wrapper>
   );
