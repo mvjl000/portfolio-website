@@ -6,13 +6,7 @@ export const Wrapper = styled.section`
 `;
 
 export const Heading = styled.h1`
-  background: -webkit-linear-gradient(
-    207deg,
-    rgba(255, 255, 255, 1) 0%,
-    rgba(167, 167, 167, 1) 100%
-  );
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: #fff;
   font-family: 'Oswald', sans-serif;
   font-weight: 600;
   font-size: 48px;
