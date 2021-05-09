@@ -12,7 +12,7 @@ export const Wrapper = styled.article`
   flex-direction: column;
   align-items: center;
   width: 80%;
-  height: 500px;
+  height: 600px;
   max-width: 1000px;
   border: 1px solid #fff;
   @media (min-width: 1024px) {
@@ -24,14 +24,19 @@ export const Wrapper = styled.article`
 export const ImageWrapper = styled.div`
   width: 100%;
   height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background-color: #fff;
   @media (min-width: 1024px) {
     width: 30%;
     height: 100%;
   }
 
-  img {
-    width: 100%;
+  div {
+    @media (min-width: 1024px) {
+      transform: rotate(-90deg);
+    }
   }
 `;
 
@@ -52,7 +57,12 @@ export const PostTitle = styled.h3`
   margin: 5px 0 0 20px;
   color: #fff;
   font-weight: 500;
-  font-size: 28px;
+  font-size: 30px;
+  text-decoration: underline;
+  transition: 0.2s;
+  &:hover {
+    color: lightblue;
+  }
   @media (min-width: 1024px) {
     margin-left: 50px;
     font-size: 38px;

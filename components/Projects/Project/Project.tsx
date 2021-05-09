@@ -1,3 +1,5 @@
+import Link from 'next/link';
+import Image from 'next/image';
 import {
   Wrapper,
   ImageWrapper,
@@ -15,13 +17,19 @@ interface ProjectProps {
 }
 
 const Project: React.FC<ProjectProps> = ({ project }) => {
-  const { title, description, date, techStack } = project;
+  const { title, description, image, date, techStack, link } = project;
 
   return (
     <Wrapper>
-      <ImageWrapper />
+      <ImageWrapper>
+        <Image src={image.url} alt={image.alt} width={384} height={110} />
+      </ImageWrapper>
       <ContentWrapper>
-        <PostTitle>{title}</PostTitle>
+        <Link href={link}>
+          <a>
+            <PostTitle>{title}</PostTitle>
+          </a>
+        </Link>
         <PostDescription>{description}</PostDescription>
         <PostTechStack>
           {techStack.tech.map((tech) => (

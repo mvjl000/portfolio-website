@@ -21,6 +21,7 @@ export const getStaticProps = async () => {
             description,
             date,
             techStack,
+						link,
             image {
               url,
               alt
