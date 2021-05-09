@@ -66,6 +66,23 @@ export const PostDescription = styled.p`
   }
 `;
 
+export const PostTechStack = styled.ul`
+  margin: 0 20px;
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 200px;
+  @media (min-width: 1024px) {
+    margin: 0 50px;
+    max-width: 400px;
+  }
+  li {
+    padding: 1px 3px;
+    margin: 3px;
+    background-color: #fff;
+    color: #111;
+  }
+`;
+
 export const PostDate = styled.p`
   position: absolute;
   bottom: 10px;
