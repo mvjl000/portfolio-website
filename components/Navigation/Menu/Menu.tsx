@@ -55,9 +55,9 @@ const Menu: React.FC<MenuProps> = ({ isMenuOpen, setIsMenuOpen }) => {
                       <ListItem>Projects</ListItem>
                     </a>
                   </Link>
-                  <Link href="/self-development">
+                  <Link href="/tech">
                     <a>
-                      <ListItem>Self Development</ListItem>
+                      <ListItem>Tech Stack</ListItem>
                     </a>
                   </Link>
                   <Link href="/setup">

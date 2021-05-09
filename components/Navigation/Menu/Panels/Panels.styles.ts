@@ -10,8 +10,8 @@ export const StyledPanel = styled(motion.div)<StyledPanelProps>`
   width: 50vw;
   position: absolute;
   z-index: 11;
-  background-color: #755f5f;
+  background-color: #ccc;
   ${({ isLeft }) => isLeft && 'left: 0'};
   ${({ isLeft }) => !isLeft && 'right: 0'};
-  ${({ isLeft }) => !isLeft && 'background-color: #bcb8b1'};
+  /* ${({ isLeft }) => !isLeft && 'background-color: #444'}; */
 `;
