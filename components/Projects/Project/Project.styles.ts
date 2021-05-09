@@ -65,3 +65,11 @@ export const PostDescription = styled.p`
     line-height: 150%;
   }
 `;
+
+export const PostDate = styled.p`
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  color: #fff;
+  font-weight: 300;
+`;
