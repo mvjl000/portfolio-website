@@ -16,6 +16,7 @@ export const Wrapper = styled.article`
   max-width: 1000px;
   border: 1px solid #fff;
   @media (min-width: 1024px) {
+    margin: 80px auto;
     height: 400px;
     flex-direction: row;
   }
