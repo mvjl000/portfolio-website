@@ -4,6 +4,7 @@ import {
   Heading,
   Subheading,
 } from '../components/Projects/Project.styles';
+import Project from '../components/Projects/Project/Project';
 
 const ProjectsPage: NextPage = () => {
   return (
@@ -13,6 +14,7 @@ const ProjectsPage: NextPage = () => {
         Here I upload all of my side projects and contributions, take a look at
         them 😀
       </Subheading>
+      <Project />
     </Wrapper>
   );
 };
