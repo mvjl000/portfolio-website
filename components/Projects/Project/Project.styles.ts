@@ -1,5 +1,10 @@
 import styled from 'styled-components';
 
+interface TechListItemProps {
+  bgc: string;
+  color: string;
+}
+
 export const Wrapper = styled.article`
   margin: 50px auto;
   position: relative;
@@ -75,12 +80,13 @@ export const PostTechStack = styled.ul`
     margin: 0 50px;
     max-width: 400px;
   }
-  li {
-    padding: 1px 3px;
-    margin: 3px;
-    background-color: #fff;
-    color: #111;
-  }
+`;
+
+export const TechListItem = styled.li<TechListItemProps>`
+  padding: 1px 3px;
+  margin: 3px;
+  background-color: ${({ bgc }) => bgc};
+  color: ${({ color }) => color};
 `;
 
 export const PostDate = styled.p`
