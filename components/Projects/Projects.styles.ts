@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const Wrapper = styled.section`
-  padding: 120px 0;
+  padding-top: 120px;
   background-color: #111;
 `;
 
@@ -43,4 +43,10 @@ export const Subheading = styled.h2`
     text-align: left;
     font-size: 28px;
   }
+`;
+
+export const CopyRight = styled.p`
+  text-align: center;
+  padding: 10px 20px;
+  color: #fff;
 `;

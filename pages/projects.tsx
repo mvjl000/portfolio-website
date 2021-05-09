@@ -4,7 +4,8 @@ import {
   Wrapper,
   Heading,
   Subheading,
-} from '../components/Projects/Project.styles';
+  CopyRight,
+} from '../components/Projects/Projects.styles';
 import Project from '../components/Projects/Project/Project';
 import { ProjectTypes } from '../types/project';
 
@@ -64,8 +65,9 @@ const ProjectsPage: NextPage<ProjectsProps> = ({ projects }) => {
         them 😀
       </Subheading>
       {projects.map((prj) => (
-        <Project project={prj} />
+        <Project key={prj.id} project={prj} />
       ))}
+      <CopyRight>Copyright © 2021 Miłosz Piskadło</CopyRight>
     </Wrapper>
   );
 };
