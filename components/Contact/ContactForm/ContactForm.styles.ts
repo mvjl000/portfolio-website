@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const StyledForm = styled.form`
-  margin: 40px 20px 20px 0;
+  margin: 0 auto;
   padding: 10px;
   width: 100%;
   max-width: 400px;
@@ -9,7 +9,8 @@ export const StyledForm = styled.form`
   z-index: 1;
   border: 1px solid #eee;
   @media (min-width: 1024px) {
-    border-color: #222;
+    margin: 40px 20px 20px 0;
+    border-color: #444;
   }
 `;
 

@@ -50,7 +50,7 @@ export const StyledHeading = styled.h1`
 `;
 
 export const ContentWrapper = styled.div`
-  margin: 50px auto 60px;
+  margin: 0 auto 60px;
   display: flex;
   flex-direction: column;
   align-items: center;
