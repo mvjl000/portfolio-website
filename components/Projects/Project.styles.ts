@@ -29,3 +29,18 @@ export const Heading = styled.h1`
     font-size: 72px;
   }
 `;
+
+export const Subheading = styled.h2`
+  margin: 25px 0;
+  padding: 0 10px;
+  color: #eee;
+  text-align: center;
+  font-weight: 300;
+  font-size: 23px;
+  @media (min-width: 1024px) {
+    margin-top: 40px;
+    padding-left: 100px;
+    text-align: left;
+    font-size: 28px;
+  }
+`;
