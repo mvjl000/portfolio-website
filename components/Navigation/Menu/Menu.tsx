@@ -50,6 +50,11 @@ const Menu: React.FC<MenuProps> = ({ isMenuOpen, setIsMenuOpen }) => {
               </BurgerWrapper>
               <StyledMenu>
                 <ul>
+                  <Link href="/">
+                    <a>
+                      <ListItem>Home</ListItem>
+                    </a>
+                  </Link>
                   <Link href="/projects">
                     <a>
                       <ListItem>Projects</ListItem>
