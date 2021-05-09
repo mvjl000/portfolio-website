@@ -8,32 +8,29 @@ import {
   TechListItem,
   PostDate,
 } from './Project.styles';
+import { ProjectTypes } from '../../../types/project';
 
-const Project: React.FC = () => {
+interface ProjectProps {
+  project: ProjectTypes;
+}
+
+const Project: React.FC<ProjectProps> = ({ project }) => {
+  const { title, description, date, techStack } = project;
+
   return (
     <Wrapper>
       <ImageWrapper />
       <ContentWrapper>
-        <PostTitle>Socnet</PostTitle>
-        <PostDescription>
-          Fullstack web-application for Currency Exchange point. SEO friendly
-          thanks to SSR, it has an admin tool for managing currencies.
-        </PostDescription>
+        <PostTitle>{title}</PostTitle>
+        <PostDescription>{description}</PostDescription>
         <PostTechStack>
-          <TechListItem bgc="#5ed3f3" color="#111">
-            React
-          </TechListItem>
-          <TechListItem bgc="#fff" color="#111">
-            NextJS
-          </TechListItem>
-          <TechListItem bgc="#2f74c0" color="#fff">
-            Typescript
-          </TechListItem>
-          <TechListItem bgc="#6fa660" color="#fff">
-            NodeJS
-          </TechListItem>
+          {techStack.tech.map((tech) => (
+            <TechListItem bgc={tech.bgc} color={tech.color}>
+              {tech.name}
+            </TechListItem>
+          ))}
         </PostTechStack>
-        <PostDate>4/20/2021</PostDate>
+        <PostDate>{date}</PostDate>
       </ContentWrapper>
     </Wrapper>
   );
