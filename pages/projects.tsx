@@ -1,4 +1,5 @@
 import { NextPage } from 'next';
+import Head from 'next/head';
 import axios from 'axios';
 import {
   Wrapper,
@@ -60,17 +61,23 @@ export const getStaticProps = async () => {
 
 const ProjectsPage: NextPage<ProjectsProps> = ({ projects }) => {
   return (
-    <Wrapper>
-      <Heading>Projects & other activity</Heading>
-      <Subheading>
-        Here I upload all of my side projects and contributions, take a look at
-        them 😀
-      </Subheading>
-      {projects.map((prj) => (
-        <Project key={prj.id} project={prj} />
-      ))}
-      <CopyRight>Copyright © 2021 Miłosz Piskadło</CopyRight>
-    </Wrapper>
+    <>
+      <Head>
+        <meta name="description" content="Take a look at my work!" />
+        <title>Projects</title>
+      </Head>
+      <Wrapper>
+        <Heading>Projects & other activity</Heading>
+        <Subheading>
+          Here I upload all of my side projects and contributions, take a look
+          at them 😀
+        </Subheading>
+        {projects.map((prj) => (
+          <Project key={prj.id} project={prj} />
+        ))}
+        <CopyRight>Copyright © 2021 Miłosz Piskadło</CopyRight>
+      </Wrapper>
+    </>
   );
 };
 
