@@ -20,6 +20,13 @@ export const Wrapper = styled.article`
     height: 400px;
     flex-direction: row;
   }
+  svg {
+    position: absolute;
+    bottom: 50px;
+    right: 20px;
+    color: white;
+    transform: scale(1.1);
+  }
 `;
 
 export const ImageWrapper = styled.div`

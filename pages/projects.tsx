@@ -23,6 +23,7 @@ export const getStaticProps = async () => {
             date,
             techStack,
 						link,
+            github,
             image {
               url,
               alt

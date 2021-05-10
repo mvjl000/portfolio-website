@@ -11,19 +11,27 @@ import {
   PostDate,
 } from './Project.styles';
 import { ProjectTypes } from '../../../types/project';
+import GitHubIcon from '@material-ui/icons/GitHub';
 
 interface ProjectProps {
   project: ProjectTypes;
 }
 
 const Project: React.FC<ProjectProps> = ({ project }) => {
-  const { title, description, image, date, techStack, link } = project;
+  const { title, description, image, date, techStack, link, github } = project;
 
   return (
     <Wrapper>
       <ImageWrapper>
         <Image src={image.url} alt={image.alt} width={384} height={110} />
       </ImageWrapper>
+      {github && (
+        <Link href={github}>
+          <a target="_blank">
+            <GitHubIcon />
+          </a>
+        </Link>
+      )}
       <ContentWrapper>
         <Link href={link}>
           <a target="_blank">
