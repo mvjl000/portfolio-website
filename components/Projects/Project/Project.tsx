@@ -26,7 +26,7 @@ const Project: React.FC<ProjectProps> = ({ project }) => {
       </ImageWrapper>
       <ContentWrapper>
         <Link href={link}>
-          <a>
+          <a target="_blank">
             <PostTitle>{title}</PostTitle>
           </a>
         </Link>
