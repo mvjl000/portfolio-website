@@ -18,3 +18,9 @@ export const Heading = styled.h1`
     font-size: 74px;
   }
 `;
+
+export const CopyRight = styled.p`
+  margin-bottom: 10px;
+  color: #000;
+  text-align: center;
+`;

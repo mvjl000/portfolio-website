@@ -1,6 +1,6 @@
 import { NextPage } from 'next';
 import axios from 'axios';
-import { Wrapper, Heading } from '../components/Tech/Tech.styles';
+import { Wrapper, Heading, CopyRight } from '../components/Tech/Tech.styles';
 import TechStack from '../components/Tech/TechStack/TechStack';
 import { TechListTypes } from '../types/techlist';
 
@@ -50,6 +50,7 @@ const TechPage: NextPage<TechStackProps> = ({ techStacks }) => {
     <Wrapper>
       <Heading>Technologies I use on a daily basis</Heading>
       <TechStack techStack={techStacks} />
+      <CopyRight>Copyright © 2021 Miłosz Piskadło</CopyRight>
     </Wrapper>
   );
 };
