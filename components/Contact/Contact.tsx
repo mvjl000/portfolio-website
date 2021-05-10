@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { useScreen } from '../../hooks/useScreen';
+import { useTranslation } from '../../hooks/useTranslation';
 import {
   Wrapper,
   StyledHeading,
@@ -18,10 +19,11 @@ import ContactForm from './ContactForm/ContactForm';
 
 const Contact: React.FC = () => {
   const { isDesktopMode } = useScreen();
+  const { translate } = useTranslation();
 
   return (
     <Wrapper>
-      <StyledHeading>#Services & Contact</StyledHeading>
+      <StyledHeading>#{translate('contactHeading')}</StyledHeading>
       {isDesktopMode && (
         <iframe
           src="https://giphy.com/embed/xT9DPIlGnuHpr2yObu"
@@ -33,16 +35,12 @@ const Contact: React.FC = () => {
       )}
       <ContentWrapper>
         <ServiceText>
-          I can make for you any type of website / web-application starting from
-          designing UI, creating website and simple backend for it.
+          {translate('contactText1')}
           <br />
-          <br />I might also help you with deploying app, and explain basics of
-          managing it.
+          <br />
+          {translate('contactText2')}
         </ServiceText>
-        <ContactText>
-          If you would like to make cooperation with me, contact me via form or
-          social media linked down below. We will discuss then all details.
-        </ContactText>
+        <ContactText>{translate('contactText3')}</ContactText>
         <FormContainer>
           <ContactForm />
           <MediaList>

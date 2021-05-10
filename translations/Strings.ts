@@ -9,6 +9,13 @@ export const LangStrings = {
     aboutMeText3: ' to see the fruit of my labor.',
     aboutMeText4: 'Besides of coding I like to train at the gym.',
     aboutMeProjectsLink: 'projects',
+    contactHeading: 'Services & Contact',
+    contactText1:
+      'I can make for you any type of website / web-application starting from designing UI, creating website and simple backend for it.',
+    contactText2:
+      'I might also help you with deploying app, and explain basics of managing it.',
+    contactText3:
+      'If you would like to make cooperation with me, contact me via form or social media linked down below. We will discuss then all details.',
     projectsHeading: 'Projects & other activity',
   },
   pl: {
@@ -21,6 +28,13 @@ export const LangStrings = {
     aboutMeText3: ', żeby zobaczyć owoce mojej pracy.',
     aboutMeText4: 'Poza programowaniem lubie ćwiczyć na siłowni.',
     aboutMeProjectsLink: 'projekty',
+    contactHeading: 'Usługi i Kontakt',
+    contactText1:
+      'Mogę zrobić dla ciebie / twojej firmy downolną stronę lub aplikację internetową zaczynając od projektowania UI, tworzenia samej strony a także backendu.',
+    contactText2:
+      'Mogę również pomóc w zamieszczaniu strony w internecie oraz wyjaśnić podstawy zarządzania stroną.',
+    contactText3:
+      'Jeśli chcesz nawiązać ze mną współpracę skontaktuj się ze mną poprzez formularz lub social media podlinkowane poniżej. Omówimy wtedy wszystkie szczegóły.',
     projectsHeading: 'Projekty i inne aktywności',
   },
 };
