@@ -33,7 +33,7 @@ const Project: React.FC<ProjectProps> = ({ project }) => {
         <PostDescription>{description}</PostDescription>
         <PostTechStack>
           {techStack.tech.map((tech) => (
-            <TechListItem bgc={tech.bgc} color={tech.color}>
+            <TechListItem key={tech.name} bgc={tech.bgc} color={tech.color}>
               {tech.name}
             </TechListItem>
           ))}
