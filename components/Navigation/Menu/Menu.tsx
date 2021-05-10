@@ -1,6 +1,7 @@
 import { Dispatch, SetStateAction } from 'react';
 import Link from 'next/link';
 import { AnimatePresence } from 'framer-motion';
+import { useTranslation } from '../../../hooks/useTranslation';
 import Burger from '../Burger/Burger';
 import {
   Wrapper,
@@ -22,6 +23,8 @@ interface MenuProps {
 }
 
 const Menu: React.FC<MenuProps> = ({ isMenuOpen, setIsMenuOpen }) => {
+  const { translate } = useTranslation();
+
   const closeMenu = () => {
     setIsMenuOpen(false);
   };
@@ -52,17 +55,17 @@ const Menu: React.FC<MenuProps> = ({ isMenuOpen, setIsMenuOpen }) => {
                 <ul>
                   <Link href="/">
                     <a>
-                      <ListItem>Home</ListItem>
+                      <ListItem>{translate('menuItem1')}</ListItem>
                     </a>
                   </Link>
                   <Link href="/projects">
                     <a>
-                      <ListItem>Projects</ListItem>
+                      <ListItem>{translate('menuItem2')}</ListItem>
                     </a>
                   </Link>
                   <Link href="/tech">
                     <a>
-                      <ListItem>Tech Stack</ListItem>
+                      <ListItem>{translate('menuItem3')}</ListItem>
                     </a>
                   </Link>
                 </ul>

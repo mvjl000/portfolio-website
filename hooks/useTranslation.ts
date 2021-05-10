@@ -15,6 +15,9 @@ type KeyType =
   | 'contactText1'
   | 'contactText2'
   | 'contactText3'
+  | 'menuItem1'
+  | 'menuItem2'
+  | 'menuItem3'
   | 'aboutMeProjectsLink';
 
 export const useTranslation = () => {
