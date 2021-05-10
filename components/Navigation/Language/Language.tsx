@@ -18,7 +18,7 @@ const Wrapper = styled.div`
 const Language: React.FC = () => {
   return (
     <Wrapper>
-      <Image src="/images/poland.png" width={20} height={20} />
+      <Image src="/images/flags/poland.png" width={20} height={20} />
       PL
     </Wrapper>
   );
