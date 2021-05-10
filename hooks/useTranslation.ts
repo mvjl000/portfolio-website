@@ -19,7 +19,8 @@ type KeyType =
   | 'menuItem2'
   | 'menuItem3'
   | 'projectsHeading'
-  | 'projectsText';
+  | 'projectsText'
+  | 'techStackHeading';
 
 export const useTranslation = () => {
   const [locale] = useContext(LanguageContext);

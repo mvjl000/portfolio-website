@@ -22,6 +22,7 @@ export const LangStrings = {
     projectsHeading: 'Projects & other activity',
     projectsText:
       'Here I upload all of my side projects and contributions, take a look at them ',
+    techStackHeading: 'Technologies I use on a daily basis',
   },
   pl: {
     intro: 'Poznaj mnie lepiej',
@@ -46,5 +47,6 @@ export const LangStrings = {
     projectsHeading: 'Projekty i inne aktywności',
     projectsText:
       'Tutaj zamieszczam wszystkie swoje projekty i wkłady w pracę innych. Śmiało, rzuć na nie okiem ',
+    techStackHeading: 'Technologie, które używam na codzień',
   },
 };

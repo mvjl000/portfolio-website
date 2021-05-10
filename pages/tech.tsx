@@ -1,6 +1,7 @@
 import { NextPage } from 'next';
 import Head from 'next/head';
 import axios from 'axios';
+import { useTranslation } from '../hooks/useTranslation';
 import { Wrapper, Heading, CopyRight } from '../components/Tech/Tech.styles';
 import TechStack from '../components/Tech/TechStack/TechStack';
 import { TechListTypes } from '../types/techlist';
@@ -47,6 +48,8 @@ export const getStaticProps = async () => {
 };
 
 const TechPage: NextPage<TechStackProps> = ({ techStacks }) => {
+  const { translate } = useTranslation();
+
   return (
     <>
       <Head>
@@ -57,7 +60,7 @@ const TechPage: NextPage<TechStackProps> = ({ techStacks }) => {
         <title>Tech Stack</title>
       </Head>
       <Wrapper>
-        <Heading>Technologies I use on a daily basis</Heading>
+        <Heading>{translate('techStackHeading')}</Heading>
         <TechStack techStack={techStacks} />
         <CopyRight>Copyright © 2021 Miłosz Piskadło</CopyRight>
       </Wrapper>

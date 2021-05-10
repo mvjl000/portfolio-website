@@ -9,8 +9,8 @@ interface TechStackProps {
 const TechStack: React.FC<TechStackProps> = ({ techStack }) => {
   return (
     <Wrapper>
-      {techStack.map((stack) => (
-        <TechList techStack={stack} />
+      {techStack.map((stack, i) => (
+        <TechList key={techStack[i].branch} techStack={stack} />
       ))}
     </Wrapper>
   );
