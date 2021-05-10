@@ -4,6 +4,7 @@ import Link from 'next/link';
 import Logo from './Logo';
 import { Wrapper } from './Navigation.styles';
 import Burger from './Burger/Burger';
+import Language from './Language/Language';
 
 interface NavigationProps {
   isMenuOpen: boolean;
@@ -21,6 +22,8 @@ const Navigation: React.FC<NavigationProps> = ({
     setIsMenuOpen(false);
   }, [router]);
 
+  console.log(pathname === '');
+
   return (
     <Wrapper>
       <Link href="/">
@@ -33,6 +36,7 @@ const Navigation: React.FC<NavigationProps> = ({
         isOpenVariant={true}
         pathname={pathname}
       />
+      {pathname === '' && <Language />}
     </Wrapper>
   );
 };
