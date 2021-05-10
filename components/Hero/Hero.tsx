@@ -1,8 +1,11 @@
 import { Link as ScrollLink } from 'react-scroll';
+import { useTranslation } from '../../hooks/useTranslation';
 import KeyboardArrowDownIcon from '@material-ui/icons/KeyboardArrowDown';
 import { Wrapper, ProfessionHeading, ArrowWrapper } from './Hero.styles';
 
 const Hero: React.FC = () => {
+  const { translate } = useTranslation();
+
   return (
     <Wrapper>
       <ProfessionHeading>Frontend Developer</ProfessionHeading>
@@ -15,7 +18,7 @@ const Hero: React.FC = () => {
         duration={600}
       >
         <ArrowWrapper>
-          <p>Get to know me better</p>
+          <p>{translate('intro')}</p>
           <KeyboardArrowDownIcon />
         </ArrowWrapper>
       </ScrollLink>
