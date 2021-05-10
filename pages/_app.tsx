@@ -1,12 +1,24 @@
 import { AppProps } from 'next/app';
+import Head from 'next/head';
 import Layout from '../components/Layout';
 import '../styles/globals.css';
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
-    <Layout>
-      <Component {...pageProps} />
-    </Layout>
+    <>
+      <Head>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta
+          name="description"
+          content="Miłosz Piskadło - Frotend Developer - Right place if you are looking for Website / Web-application"
+        />
+        <meta name="robots" content="index, follow" />
+        <title>Miłosz Piskadło</title>
+      </Head>
+      <Layout>
+        <Component {...pageProps} />
+      </Layout>
+    </>
   );
 }
 
