@@ -8,13 +8,13 @@ type KeyType = 'intro';
 export const useTranslation = () => {
   const [locale] = useContext(LanguageContext);
 
-  function t(key: KeyType) {
+  const translate = (key: KeyType) => {
     if (!LangStrings[locale][key]) {
       console.warn(`No string '${key}' for locale '${locale}'`);
     }
 
     return LangStrings[locale][key] || LangStrings[defaultLocale][key] || '';
-  }
+  };
 
-  return { t, locale };
+  return { translate, locale };
 };
