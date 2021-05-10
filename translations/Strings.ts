@@ -30,7 +30,7 @@ export const LangStrings = {
     aboutMeProjectsLink: 'projekty',
     contactHeading: 'Usługi i Kontakt',
     contactText1:
-      'Mogę zrobić dla ciebie / twojej firmy downolną stronę lub aplikację internetową zaczynając od projektowania UI, tworzenia samej strony a także backendu.',
+      'Mogę zrobić dla ciebie / twojej firmy downolną stronę lub aplikację internetową zaczynając od projektowania UI, tworzenia samej strony, kończąc na backendzie.',
     contactText2:
       'Mogę również pomóc w zamieszczaniu strony w internecie oraz wyjaśnić podstawy zarządzania stroną.',
     contactText3:
