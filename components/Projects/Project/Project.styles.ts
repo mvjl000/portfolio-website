@@ -55,7 +55,6 @@ export const ContentWrapper = styled.div`
   align-items: flex-start;
   justify-content: space-around;
   width: 100%;
-  overflow-y: scroll;
   @media (min-width: 1024px) {
     height: 100%;
   }
