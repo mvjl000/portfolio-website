@@ -1,4 +1,5 @@
 import { NextPage } from 'next';
+import Head from 'next/head';
 import axios from 'axios';
 import { Wrapper, Heading, CopyRight } from '../components/Tech/Tech.styles';
 import TechStack from '../components/Tech/TechStack/TechStack';
@@ -47,11 +48,20 @@ export const getStaticProps = async () => {
 
 const TechPage: NextPage<TechStackProps> = ({ techStacks }) => {
   return (
-    <Wrapper>
-      <Heading>Technologies I use on a daily basis</Heading>
-      <TechStack techStack={techStacks} />
-      <CopyRight>Copyright © 2021 Miłosz Piskadło</CopyRight>
-    </Wrapper>
+    <>
+      <Head>
+        <meta
+          name="description"
+          content="Technology, that I'm using on a daily basis."
+        />
+        <title>Tech Stack</title>
+      </Head>
+      <Wrapper>
+        <Heading>Technologies I use on a daily basis</Heading>
+        <TechStack techStack={techStacks} />
+        <CopyRight>Copyright © 2021 Miłosz Piskadło</CopyRight>
+      </Wrapper>
+    </>
   );
 };
 
