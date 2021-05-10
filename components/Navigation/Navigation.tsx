@@ -22,8 +22,6 @@ const Navigation: React.FC<NavigationProps> = ({
     setIsMenuOpen(false);
   }, [router]);
 
-  console.log(pathname === '');
-
   return (
     <Wrapper>
       <Link href="/">

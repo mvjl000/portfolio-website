@@ -19,7 +19,6 @@ const Wrapper = styled.div`
 
 const Language: React.FC = () => {
   const [locale, setLocale] = useContext(LanguageContext);
-  console.log(locale);
 
   const handleLanguageChange = () => {
     if (locale === 'en') {
