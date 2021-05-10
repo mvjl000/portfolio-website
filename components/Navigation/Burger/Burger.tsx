@@ -3,7 +3,7 @@ import { OpenBurger, CloseBurger } from './Burger.styles';
 interface BurgerProps {
   isOpenVariant: boolean;
   onButtonClick: () => void;
-  pathname: string;
+  pathname?: string;
 }
 
 const Burger: React.FC<BurgerProps> = ({

@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 interface LogoProps {
-  pathname: string;
+  pathname?: string;
 }
 
 const Wrapper = styled.div<LogoProps>`

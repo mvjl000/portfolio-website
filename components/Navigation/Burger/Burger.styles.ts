@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 interface OpenBurgerProps {
-  pathname: string;
+  pathname?: string;
 }
 
 const Burger = styled.button`
