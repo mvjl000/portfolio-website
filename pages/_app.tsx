@@ -1,5 +1,6 @@
 import { AppProps } from 'next/app';
 import Head from 'next/head';
+import LanguageProvider from '../context/LanguageProvider';
 import Layout from '../components/Layout';
 import '../styles/globals.css';
 
@@ -15,9 +16,11 @@ function MyApp({ Component, pageProps }: AppProps) {
         <meta name="robots" content="index, follow" />
         <title>Miłosz Piskadło</title>
       </Head>
-      <Layout>
-        <Component {...pageProps} />
-      </Layout>
+      <LanguageProvider>
+        <Layout>
+          <Component {...pageProps} />
+        </Layout>
+      </LanguageProvider>
     </>
   );
 }
