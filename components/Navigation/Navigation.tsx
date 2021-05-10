@@ -15,6 +15,7 @@ const Navigation: React.FC<NavigationProps> = ({
   setIsMenuOpen,
 }) => {
   const router = useRouter();
+  const pathname = router.pathname.split('/')[1];
 
   useEffect(() => {
     setIsMenuOpen(false);
@@ -24,12 +25,13 @@ const Navigation: React.FC<NavigationProps> = ({
     <Wrapper>
       <Link href="/">
         <a>
-          <Logo />
+          <Logo pathname={pathname} />
         </a>
       </Link>
       <Burger
         onButtonClick={() => setIsMenuOpen(!isMenuOpen)}
         isOpenVariant={true}
+        pathname={pathname}
       />
     </Wrapper>
   );

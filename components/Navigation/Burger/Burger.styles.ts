@@ -1,5 +1,9 @@
 import styled from 'styled-components';
 
+interface OpenBurgerProps {
+  pathname: string;
+}
+
 const Burger = styled.button`
   position: relative;
   margin-top: 11px;
@@ -19,16 +23,18 @@ const Burger = styled.button`
   }
 `;
 
-export const OpenBurger = styled(Burger)`
+export const OpenBurger = styled(Burger)<OpenBurgerProps>`
   &::before {
     top: 0;
     left: 0;
-    background-color: #fff;
+    background-color: ${({ pathname }) =>
+      pathname === 'tech' ? '#111' : '#fff'};
   }
   &::after {
     bottom: 0;
     left: 0;
-    background-color: #fff;
+    background-color: ${({ pathname }) =>
+      pathname === 'tech' ? '#111' : '#fff'};
   }
 `;
 
