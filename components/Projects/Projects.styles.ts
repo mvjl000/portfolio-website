@@ -6,10 +6,11 @@ export const Wrapper = styled.section`
 `;
 
 export const Heading = styled.h1`
+  padding: 0 20px;
   color: #fff;
   font-family: 'Oswald', sans-serif;
   font-weight: 600;
-  font-size: 48px;
+  font-size: 58px;
   text-align: center;
   @media (min-width: 1024px) {
     margin-top: 30px;
