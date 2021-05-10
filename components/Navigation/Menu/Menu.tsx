@@ -62,7 +62,7 @@ const Menu: React.FC<MenuProps> = ({ isMenuOpen, setIsMenuOpen }) => {
                   </Link>
                   <Link href="/tech">
                     <a>
-                      <ListItem>Tech Stack & Setup</ListItem>
+                      <ListItem>Tech Stack</ListItem>
                     </a>
                   </Link>
                 </ul>
