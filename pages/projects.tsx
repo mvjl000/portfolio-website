@@ -71,10 +71,7 @@ const ProjectsPage: NextPage<ProjectsProps> = ({ projects }) => {
       </Head>
       <Wrapper>
         <Heading>{translate('projectsHeading')}</Heading>
-        <Subheading>
-          Here I upload all of my side projects and contributions, take a look
-          at them 😀
-        </Subheading>
+        <Subheading>{translate('projectsText')}😀</Subheading>
         {projects.map((prj) => (
           <Project key={prj.id} project={prj} />
         ))}

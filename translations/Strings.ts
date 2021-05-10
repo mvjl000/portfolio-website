@@ -20,6 +20,8 @@ export const LangStrings = {
     menuItem2: 'Projects',
     menuItem3: 'Tech Stack',
     projectsHeading: 'Projects & other activity',
+    projectsText:
+      'Here I upload all of my side projects and contributions, take a look at them ',
   },
   pl: {
     intro: 'Poznaj mnie lepiej',
@@ -42,5 +44,7 @@ export const LangStrings = {
     menuItem2: 'Projekty',
     menuItem3: 'Technologie',
     projectsHeading: 'Projekty i inne aktywności',
+    projectsText:
+      'Tutaj zamieszczam wszystkie swoje projekty i wkłady w pracę innych. Śmiało, rzuć na nie okiem ',
   },
 };

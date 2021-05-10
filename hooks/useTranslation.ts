@@ -5,12 +5,12 @@ import { LangStrings } from '../translations/Strings';
 
 type KeyType =
   | 'intro'
-  | 'projectsHeading'
   | 'aboutMeHeading'
   | 'aboutMeText1'
   | 'aboutMeText2'
   | 'aboutMeText3'
   | 'aboutMeText4'
+  | 'aboutMeProjectsLink'
   | 'contactHeading'
   | 'contactText1'
   | 'contactText2'
@@ -18,7 +18,8 @@ type KeyType =
   | 'menuItem1'
   | 'menuItem2'
   | 'menuItem3'
-  | 'aboutMeProjectsLink';
+  | 'projectsHeading'
+  | 'projectsText';
 
 export const useTranslation = () => {
   const [locale] = useContext(LanguageContext);
