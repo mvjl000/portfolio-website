@@ -1,6 +1,7 @@
 import { NextPage } from 'next';
 import Head from 'next/head';
 import axios from 'axios';
+import { useTranslation } from '../hooks/useTranslation';
 import {
   Wrapper,
   Heading,
@@ -60,6 +61,8 @@ export const getStaticProps = async () => {
 };
 
 const ProjectsPage: NextPage<ProjectsProps> = ({ projects }) => {
+  const { translate } = useTranslation();
+
   return (
     <>
       <Head>
@@ -67,7 +70,7 @@ const ProjectsPage: NextPage<ProjectsProps> = ({ projects }) => {
         <title>Projects</title>
       </Head>
       <Wrapper>
-        <Heading>Projects & other activity</Heading>
+        <Heading>{translate('projectsHeading')}</Heading>
         <Subheading>
           Here I upload all of my side projects and contributions, take a look
           at them 😀

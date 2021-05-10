@@ -3,7 +3,15 @@ import { useContext } from 'react';
 import { LanguageContext, defaultLocale } from '../context/LanguageProvider';
 import { LangStrings } from '../translations/Strings';
 
-type KeyType = 'intro';
+type KeyType =
+  | 'intro'
+  | 'projectsHeading'
+  | 'aboutMeHeading'
+  | 'aboutMeText1'
+  | 'aboutMeText2'
+  | 'aboutMeText3'
+  | 'aboutMeText4'
+  | 'aboutMeProjectsLink';
 
 export const useTranslation = () => {
   const [locale] = useContext(LanguageContext);

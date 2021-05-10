@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { useTranslation } from '../../hooks/useTranslation';
 import {
   Wrapper,
   StyledHeading,
@@ -8,24 +9,23 @@ import {
 } from './About.styles';
 
 const About: React.FC = () => {
+  const { translate } = useTranslation();
+
   return (
     <Wrapper>
       <div id="about_scrollTarget" />
-      <StyledHeading>#About Me</StyledHeading>
+      <StyledHeading>#{translate('aboutMeHeading')}</StyledHeading>
       <ContentWrapper>
         <AboutContent>
-          Hi, it's good to see you here! My name is Milosz - 17 y.o. I live in
-          Poland, based in Rzeszow. I'm a freelancer Web Developer, mainly
-          focused on frontend, but I enjoy backend as well (Javascript -
-          Typescript - Node).
+          {translate('aboutMeText1')}
           <br />
           <br />
-          Started learning to code in late 2019, fell in love with React few
-          months later. Broad minded and willing to keep learning. Check out my{' '}
-          <Link href="/projects">projects</Link> to see the fruits of my labor.
+          {translate('aboutMeText2')}
+          <Link href="/projects">{translate('aboutMeProjectsLink')}</Link>
+          {translate('aboutMeText3')}
           <br />
           <br />
-          Besides of coding I like to train at the gym.
+          {translate('aboutMeText4')}
         </AboutContent>
         <iframe
           src="https://giphy.com/embed/xT5LMFZDsj0AKUDYTS"
@@ -37,7 +37,7 @@ const About: React.FC = () => {
       </ContentWrapper>
       <ToolSetWrapper>
         <p>
-          Typescript & React - best combo, try to change my mind down in contact
+          Typescript & React - best combo, try to change my mind in contact
           section ( ͡° ͜ʖ ͡°)
         </p>
       </ToolSetWrapper>
