@@ -17,4 +17,5 @@ export interface ProjectTypes {
     tech: techStackItem[];
   };
   link: string;
+  github?: string;
 }
