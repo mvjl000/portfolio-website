@@ -51,6 +51,6 @@ export const LangStrings = {
     projectsHeading: 'Projekty i inne aktywności',
     projectsText:
       'Tutaj zamieszczam wszystkie swoje projekty i wkłady w pracę innych. Śmiało, rzuć na nie okiem ',
-    techStackHeading: 'Technologie, które używam na codzień',
+    techStackHeading: 'Technologie, z których korzystam na codzień',
   },
 };
