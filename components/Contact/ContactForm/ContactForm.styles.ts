@@ -11,8 +11,13 @@ export const StyledForm = styled.form`
   z-index: 1;
   border: 1px solid #eee;
   @media (min-width: 1024px) {
-    margin: 40px 20px 20px 0;
+    height: 320px;
+    margin-right: 20px;
     border-color: #444;
+  }
+  @media (min-width: 1500px) {
+    height: 370px;
+    margin: 0 20px 20px 0;
   }
 `;
 
@@ -59,6 +64,12 @@ export const StyledTextArea = styled.div`
   position: relative;
   width: 100%;
   height: 200px;
+  @media (min-width: 1024px) {
+    height: 150px;
+  }
+  @media (min-width: 1500px) {
+    height: 200px;
+  }
   label {
     color: #000;
     font-size: 20px;

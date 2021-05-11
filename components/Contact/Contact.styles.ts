@@ -69,6 +69,10 @@ export const ServiceText = styled.p`
   color: #111;
   z-index: 2;
   @media (min-width: 1024px) {
+    font-size: 23px;
+    color: #fff;
+  }
+  @media (min-width: 1500px) {
     font-size: 25px;
     color: #fff;
   }
