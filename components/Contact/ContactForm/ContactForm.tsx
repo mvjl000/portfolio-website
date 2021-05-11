@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import axios from 'axios';
 import { useTranslation } from '../../../hooks/useTranslation';
 import {
   StyledForm,
@@ -24,9 +25,14 @@ const ContactForm: React.FC = () => {
     }
   };
 
-  const handleFormSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+  const handleFormSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    console.log(email, message);
+    try {
+      const responseData = await axios.post('/api/contact', { email, message });
+      console.log(responseData);
+    } catch (error) {
+      console.log(error);
+    }
   };
 
   return (
