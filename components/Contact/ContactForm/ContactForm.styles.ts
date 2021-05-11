@@ -121,4 +121,8 @@ export const Button = styled.button`
   @media (min-width: 1024px) {
     color: #fff;
   }
+  img {
+    width: 32px;
+    height: 32px;
+  }
 `;

@@ -1,4 +1,3 @@
-import Image from 'next/image';
 import { useTranslation } from '../../../hooks/useTranslation';
 import {
   StyledForm,
@@ -21,8 +20,7 @@ const ContactForm: React.FC = () => {
         <textarea id="message"></textarea>
       </StyledTextArea>
       <Button type="submit">
-        {translate('contactFormButton')}{' '}
-        <Image src="/images/plane.png" width={32} height={32} />
+        {translate('contactFormButton')} <img src="/images/plane.png" />
       </Button>
     </StyledForm>
   );
