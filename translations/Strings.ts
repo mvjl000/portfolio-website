@@ -16,6 +16,8 @@ export const LangStrings = {
       'I might also help you with deploying app, and explain basics of managing it.',
     contactText3:
       'If you would like to make cooperation with me, contact me via form or social media linked down below. We will discuss then all details.',
+    contactFormMessage: 'Message',
+    contactFormButton: 'Send',
     menuItem1: 'Home',
     menuItem2: 'Projects',
     menuItem3: 'Tech Stack',
@@ -41,6 +43,8 @@ export const LangStrings = {
       'Mogę również pomóc w zamieszczaniu strony w internecie oraz wyjaśnić podstawy zarządzania stroną.',
     contactText3:
       'Jeśli chcesz nawiązać ze mną współpracę skontaktuj się ze mną poprzez formularz lub social media podlinkowane poniżej. Omówimy wtedy wszystkie szczegóły.',
+    contactFormMessage: 'Wiadomość',
+    contactFormButton: 'Wyślij',
     menuItem1: 'Strona Główna',
     menuItem2: 'Projekty',
     menuItem3: 'Technologie',

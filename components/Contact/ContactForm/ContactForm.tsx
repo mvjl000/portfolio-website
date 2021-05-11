@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import { useTranslation } from '../../../hooks/useTranslation';
 import {
   StyledForm,
   StyledInput,
@@ -7,6 +8,8 @@ import {
 } from './ContactForm.styles';
 
 const ContactForm: React.FC = () => {
+  const { translate } = useTranslation();
+
   return (
     <StyledForm>
       <StyledInput>
@@ -14,11 +17,12 @@ const ContactForm: React.FC = () => {
         <input id="email" type="email" />
       </StyledInput>
       <StyledTextArea>
-        <label htmlFor="message">Message:</label>
+        <label htmlFor="message">{translate('contactFormMessage')}:</label>
         <textarea id="message"></textarea>
       </StyledTextArea>
       <Button type="submit">
-        Send <Image src="/images/plane.png" width={32} height={32} />
+        {translate('contactFormButton')}{' '}
+        <Image src="/images/plane.png" width={32} height={32} />
       </Button>
     </StyledForm>
   );
