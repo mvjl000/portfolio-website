@@ -1,11 +1,13 @@
 import styled from 'styled-components';
 
 export const StyledForm = styled.form`
+  position: relative;
   margin: 0 auto;
+  padding-bottom: 30px;
   padding: 10px;
   width: 100%;
   max-width: 400px;
-  height: 350px;
+  height: 370px;
   z-index: 1;
   border: 1px solid #eee;
   @media (min-width: 1024px) {
@@ -89,5 +91,23 @@ export const StyledTextArea = styled.div`
     @media (min-width: 1024px) {
       background-color: #fff;
     }
+  }
+`;
+
+export const Button = styled.button`
+  position: absolute;
+  bottom: 10px;
+  right: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 85px;
+  background-color: transparent;
+  border: none;
+  font-size: 17px;
+  cursor: pointer;
+  font-weight: 500;
+  @media (min-width: 1024px) {
+    color: #fff;
   }
 `;
