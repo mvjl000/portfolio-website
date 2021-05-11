@@ -112,7 +112,7 @@ export const Button = styled.button`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 85px;
+  width: 90px;
   background-color: transparent;
   border: none;
   font-size: 17px;
