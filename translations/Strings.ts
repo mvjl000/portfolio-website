@@ -15,7 +15,7 @@ export const LangStrings = {
     contactText2:
       'I might also help you with deploying app, and explain basics of managing it.',
     contactText3:
-      'If you would like to make cooperation with me, contact me via form or social media linked down below. We will discuss then all details.',
+      'If you would like to make a collaboration with me, contact me via form or social media linked down below. We will discuss then all details.',
     contactFormMessage: 'Message',
     contactFormButton: 'Send',
     menuItem1: 'Home',
