@@ -29,8 +29,9 @@ const ContactForm: React.FC = () => {
     event.preventDefault();
     if (!message) return;
     try {
-      const responseData = await axios.post('/api/contact', { email, message });
-      console.log('>>RESPONSE<<', responseData);
+      await axios.post('/api/contact', { email, message });
+      setEmail('');
+      setMessage('');
     } catch (error) {
       console.log(error);
     }
