@@ -28,11 +28,11 @@ export const LangStrings = {
     intro: 'Poznaj mnie lepiej',
     aboutMeHeading: 'O mnie',
     aboutMeText1:
-      "Cześć, dobrze cie tu widzieć! Nazywam się Miłosz, mam 17 lat, mieszkam w Polsce a konkretnie w Rzeszowie. Jestem Freelancerem - Web Developerem głównie skupionym na frontendzie ale lubię też coś 'podłubać' na backendzie (Oczywiście w świecie Javascriptu - Typescriptu).",
+      "Cześć, dobrze cię tu widzieć! Nazywam się Miłosz, mam 17 lat, mieszkam w Polsce a konkretnie w Rzeszowie. Jestem Freelancerem - Web Developerem głównie skupionym na frontendzie ale lubię też coś 'podłubać' na backendzie (Oczywiście w świecie Javascriptu - Typescriptu).",
     aboutMeText2:
-      'Zacząłem programować pod koniec 2019r. Pare miesięcy później odkryłem Reacta i pokochałem tą technologię. Otwarty umysł, chętny do ciągłej nauki i doskonalenia umiejętności. Sprawdź moje ',
+      'Zacząłem programować pod koniec 2019r. Parę miesięcy później odkryłem Reacta i pokochałem tę technologię. Posiadam otwarty umysł, chętny do ciągłej nauki i doskonalenia umiejętności. Sprawdź moje ',
     aboutMeText3: ', żeby zobaczyć owoce mojej pracy.',
-    aboutMeText4: 'Poza programowaniem lubie ćwiczyć na siłowni.',
+    aboutMeText4: 'Poza programowaniem lubię ćwiczyć na siłowni.',
     aboutMeProjectsLink: 'projekty',
     contactHeading: 'Usługi i Kontakt',
     contactText1:
