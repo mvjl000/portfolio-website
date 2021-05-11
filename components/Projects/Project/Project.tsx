@@ -1,5 +1,7 @@
+import { useContext } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
+import { LanguageContext } from '../../../context/LanguageProvider';
 import {
   Wrapper,
   ImageWrapper,
@@ -18,7 +20,18 @@ interface ProjectProps {
 }
 
 const Project: React.FC<ProjectProps> = ({ project }) => {
-  const { title, description, image, date, techStack, link, github } = project;
+  const [locale, setLocale] = useContext(LanguageContext);
+
+  const {
+    title,
+    enDescription,
+    plDescription,
+    image,
+    date,
+    techStack,
+    link,
+    github,
+  } = project;
 
   return (
     <Wrapper>
@@ -38,7 +51,9 @@ const Project: React.FC<ProjectProps> = ({ project }) => {
             <PostTitle>{title}</PostTitle>
           </a>
         </Link>
-        <PostDescription>{description}</PostDescription>
+        <PostDescription>
+          {locale === 'en' ? enDescription : plDescription}
+        </PostDescription>
         <PostTechStack>
           {techStack.tech.map((tech) => (
             <TechListItem key={tech.name} bgc={tech.bgc} color={tech.color}>

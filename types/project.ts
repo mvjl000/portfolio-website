@@ -7,7 +7,8 @@ interface techStackItem {
 export interface ProjectTypes {
   id: string;
   title: string;
-  description: string;
+  enDescription: string;
+  plDescription: string;
   image: {
     url: string;
     alt: string;

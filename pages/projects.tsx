@@ -21,7 +21,8 @@ export const getStaticProps = async () => {
           allProjects {
             id,
             title,
-            description,
+            enDescription,
+    				plDescription,
             date,
             techStack,
 						link,
