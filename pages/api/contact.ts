@@ -26,7 +26,7 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
     else console.log(info);
   });
 
-  res.status(200);
+  res.status(200).json({ message: 'Email sent.' });
 };
 
 export default handler;
