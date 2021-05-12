@@ -21,12 +21,20 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
     html: `<div><h3>${email}</h3><p>${message}</p></div>`,
   };
   //@ts-ignore
-  await transporter.sendMail(mailData, function (err, info) {
-    if (err) console.log(err);
-    else console.log(info);
+  transporter.sendMail(mailData, function (err, info) {
+    if (err) {
+      console.log(err);
+      res.status(500).json({ message: 'Failed to send an email' });
+    } else {
+      console.log(info);
+      res
+        .status(200)
+        .json({
+          message: 'Email sent successfully',
+          messageId: info.messageId,
+        });
+    }
   });
-
-  res.status(200).json({ message: 'Email sent.' });
 };
 
 export default handler;
