@@ -11,7 +11,7 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
       user: process.env.USER_MAIL,
       pass: process.env.USER_PASSWORD,
     },
-    secure: true,
+    secureConnection: true,
   });
   const mailData = {
     from: process.env.USER_MAIL,
