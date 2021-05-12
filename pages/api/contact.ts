@@ -21,7 +21,7 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
     html: `<div><h3>${email}</h3><p>${message}</p></div>`,
   };
   //@ts-ignore
-  transporter.sendMail(mailData, function (err, info) {
+  await transporter.sendMail(mailData, function (err, info) {
     if (err) console.log(err);
     else console.log(info);
   });
