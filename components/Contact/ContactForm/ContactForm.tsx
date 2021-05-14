@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { useTranslation } from '../../../hooks/useTranslation';
 import {
@@ -11,7 +11,14 @@ import {
 const ContactForm: React.FC = () => {
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
+  const [isSuccess, setIsSuccess] = useState(false);
   const { translate } = useTranslation();
+
+  useEffect(() => {
+    setTimeout(() => {
+      setIsSuccess(false);
+    }, 3000);
+  }, [isSuccess]);
 
   const handleFieldChange = (
     event:
@@ -32,6 +39,7 @@ const ContactForm: React.FC = () => {
       await axios.post('/api/contact', { email, message });
       setEmail('');
       setMessage('');
+      setIsSuccess(true);
     } catch (error) {
       console.log(error);
     }
@@ -58,7 +66,7 @@ const ContactForm: React.FC = () => {
           onChange={handleFieldChange}
         ></textarea>
       </StyledTextArea>
-      <Button type="submit">
+      <Button type="submit" isSuccess={isSuccess}>
         {translate('contactFormButton')} <img src="/images/plane.png" />
       </Button>
     </StyledForm>

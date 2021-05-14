@@ -1,5 +1,9 @@
 import styled from 'styled-components';
 
+interface ButtonProps {
+  isSuccess: boolean;
+}
+
 export const StyledForm = styled.form`
   position: relative;
   margin: 0 auto;
@@ -105,19 +109,25 @@ export const StyledTextArea = styled.div`
   }
 `;
 
-export const Button = styled.button`
+export const Button = styled.button<ButtonProps>`
+  padding: 5px 10px;
+  background-color: ${({ isSuccess }) =>
+    isSuccess ? '#58dd55' : 'transparent'};
+  color: ${({ isSuccess }) => (isSuccess ? '#fff' : '#000')};
+  border-radius: 10px;
+
   position: absolute;
   bottom: 10px;
   right: 35px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 90px;
-  background-color: transparent;
+  width: 110px;
   border: none;
   font-size: 17px;
   cursor: pointer;
   font-weight: 500;
+  transition: 0.3s ease-in;
   @media (min-width: 1024px) {
     color: #fff;
   }
