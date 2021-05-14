@@ -7,17 +7,19 @@ import {
   StyledTextArea,
   Button,
 } from './ContactForm.styles';
+import Loader from '../../shared/Loader';
 
 const ContactForm: React.FC = () => {
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
   const [isSuccess, setIsSuccess] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
   const { translate } = useTranslation();
 
   useEffect(() => {
     setTimeout(() => {
       setIsSuccess(false);
-    }, 3000);
+    }, 3500);
   }, [isSuccess]);
 
   const handleFieldChange = (
@@ -35,8 +37,10 @@ const ContactForm: React.FC = () => {
   const handleFormSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     if (!message) return;
+    setIsLoading(true);
     try {
       await axios.post('/api/contact', { email, message });
+      setIsLoading(false);
       setEmail('');
       setMessage('');
       setIsSuccess(true);
@@ -59,6 +63,7 @@ const ContactForm: React.FC = () => {
       </StyledInput>
       <StyledTextArea>
         <label htmlFor="message">{translate('contactFormMessage')}:</label>
+        {isLoading && <Loader />}
         <textarea
           id="message"
           name="message"
