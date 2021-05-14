@@ -22,6 +22,7 @@ export const Wrapper = styled.section`
   background-image: url('/images/darkerWallSide.JPG');
   background-repeat: no-repeat;
   background-position: 45% 10%;
+  background-size: cover;
 `;
 
 export const ProfessionHeading = styled.h1`
