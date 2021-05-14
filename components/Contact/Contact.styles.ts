@@ -50,14 +50,18 @@ export const StyledHeading = styled.h1`
 `;
 
 export const ContentWrapper = styled.div`
+  max-width: 1150px;
   margin: 0 auto 60px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
+  z-index: 2;
   @media (min-width: 1024px) {
     position: absolute;
     left: 50%;
+    top: 50%;
+    transform: translateY(-50%);
   }
 `;
 
