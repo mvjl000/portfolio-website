@@ -13,6 +13,10 @@ function MyApp({ Component, pageProps }: AppProps) {
           name="description"
           content="Miłosz Piskadło - Frotend Developer - Right place if you are looking for Website / Web-application"
         />
+        <meta
+          name="google-site-verification"
+          content="TW6_lu0BnTXa5xHc5OFc43o1L-pwWhxSpHgd02yfZ2Q"
+        />
         <meta name="robots" content="index, follow" />
         <title>Miłosz Piskadło</title>
       </Head>
